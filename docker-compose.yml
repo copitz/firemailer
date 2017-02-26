@@ -1,0 +1,16 @@
+version: "2"
+
+services:
+  firemailer:
+    build: .
+    image: firemailer:dev
+    environment:
+      FB_URL: https://my-project.firebaseio.com
+      SMTP_HOST: smtp
+      NODE_ENV: production
+    volumes:
+      - ./service-account.json:/opt/app/service-account.json
+      - ./config.js:/opt/app/config.js
+
+  smtp:
+    image: namshi/smtp

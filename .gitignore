@@ -1,0 +1,7 @@
+.DS_Store/
+/.idea
+/node_modules
+service-account.json
+config.js
+test.js
+app.yaml
