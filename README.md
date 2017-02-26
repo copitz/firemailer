@@ -20,7 +20,7 @@ The quickest way to get this up and running as the docker-compose already contai
 
     docker run -v config.js:/opt/app/config.js copitz/firemailer
 
-### Node
+### npm
 
     git clone git@github.com:copitz/firemailer.git
     cd firemailer
@@ -38,6 +38,8 @@ Configuration
  
 Sending an email
 ================
+
+Just push an [Nodemailer email object](https://nodemailer.com/message/) to the configured path.
 
 Assuming you set `config.firebase.path` to `"mails"` and the firemailer daemon is running, sending an email via firebase is as easy as:
 
